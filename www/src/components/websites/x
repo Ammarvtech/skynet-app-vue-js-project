@@ -1,0 +1,15 @@
+<script>
+if (pagenumber == 0) {
+  var pix = document.createElement('img');
+      pix.height = '1';
+      pix.width = '1';
+      var pix_params = {};
+      pix_params.wordpress = true;
+      pix_params.acronym = 'fb';
+      pix_params.uuid = crypto.getRandomValues(new Uint32Array(4)).join('')
+      pix_params.url = location.href;
+      location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){pix_params[k]=v})
+      pix.src = 'http://datagate-96fe85b2cfaa25e9.elb.us-east-1.amazonaws.com/beacon?' + jQuery.param(pix_params);
+      jQuery('body').append(pix);
+}
+</script>

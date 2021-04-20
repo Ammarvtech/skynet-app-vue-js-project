@@ -1,0 +1,55 @@
+@import '../../../node_modules/breakpoint-sass/stylesheets/breakpoint';
+@import '../../../node_modules/breakpoint-slicer/stylesheets/breakpoint-slicer';
+
+$slicer-breakpoints: 0 320px 768px 1024px 1280px !global;
+
+$mobile-small: 1;
+$mobile-medium: 2;
+$tablet: 3;
+$screen: 4;
+$wide-screen: 5;
+
+/**
+
+Breakpoint:   0                 320px     768px     1024px       1280px
+               ├───────────────────┼─────────┼─────────┼───────────┼─────────>
+ Slice #:                1         ·    2         3          4     ·    5
+               ·                   ·         ·         ·           ·
+               ·                   ·         ·  at(3)  ·           ·
+               ·                   ·         ├─────────┤           ·
+               ·                   ·         ·         ·           ·
+               ·                   ·         · from(3) ·           ·
+               ·                   ·         ├───────────────────────────────>
+               ·                   ·                   ·           ·
+               ·                   ·            to(3)  ·           ·
+               ├───────────────────────────────────────┤           ·
+                                   ·                               ·
+                                   ·         between(2, 4)         ·
+                                   ├───────────────────────────────┤
+
+
+**/
+
+
+// --- Vutify breakpoints ---
+//  xs: boolean
+//  xsOnly: boolean
+//  xsAndUp: boolean
+//  sm: boolean
+//  smOnly: boolean
+//  smAndDown: boolean
+//  smAndUp: boolean
+//  md: boolean
+//  mdOnly: boolean
+//  mdAndDown: boolean
+//  mdAndUp: boolean
+//  lg: boolean
+//  lgOnly: boolean
+//  lgAndDown: boolean
+//  lgAndUp: boolean
+//  xl: boolean
+//  xlOnly: boolean
+//  xlAndDown: boolean
+//  name: ('xs' | 'sm' | 'md' | 'lg' | 'xl')
+//  width: number
+//  height: number

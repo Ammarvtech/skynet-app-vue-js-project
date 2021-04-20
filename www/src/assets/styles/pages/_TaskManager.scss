@@ -1,0 +1,78 @@
+.title {
+        padding-left: 4px;
+    }
+.medium {
+    width: 150px;
+    font-size: initial;
+    text-align: center;
+}
+.arrows {
+    top: 35px;
+    font-size: larger;
+}
+.btnHide {
+    visibility: hidden;
+}
+.btnGroup {
+    width: 200px;
+}
+table thead > tr > th:active,
+table thead > tr > td:active {
+    outline: none;
+}
+
+table thead ._sorting,
+table thead ._sorting_asc,
+table thead ._sorting_desc,
+table thead ._sorting_asc_disabled,
+table thead ._sorting_desc_disabled {
+    cursor: pointer;
+    position: relative;
+}
+
+table thead ._sorting:before, table thead ._sorting:after,
+table thead ._sorting_asc:before,
+table thead ._sorting_asc:after,
+table thead ._sorting_desc:before,
+table thead ._sorting_desc:after,
+table thead ._sorting_asc_disabled:before,
+table thead ._sorting_asc_disabled:after,
+table thead ._sorting_desc_disabled:before,
+table thead ._sorting_desc_disabled:after {
+    position: absolute;
+    bottom: 0.9em;
+    display: block;
+    opacity: 0.3;
+}
+
+table thead ._sorting:before,
+table thead ._sorting_asc:before,
+table thead ._sorting_desc:before,
+table thead ._sorting_asc_disabled:before,
+table thead ._sorting_desc_disabled:before {
+    right: 1.5em;
+    content: "\2191";
+    bottom: 14px;
+    font-size: large;
+}
+
+table thead ._sorting:after,
+table thead ._sorting_asc:after,
+table thead ._sorting_desc:after,
+table thead ._sorting_asc_disabled:after,
+table thead ._sorting_desc_disabled:after {
+    right: 1em;
+    content: "\2193";
+    bottom: 14px;
+    font-size: large;
+}
+
+table thead ._sorting_asc:before,
+table thead ._sorting_desc:after {
+    opacity: 1;
+}
+
+table thead ._sorting_asc_disabled:before,
+table thead ._sorting_desc_disabled:after {
+    opacity: 0;
+}

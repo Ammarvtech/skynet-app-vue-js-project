@@ -1,0 +1,114 @@
+@import '_reset.scss';
+@import '_breakpoint.scss';
+@import '_variables.scss';
+
+/* url's */
+//@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+
+
+.red {
+  background-color:transparent !important;
+}
+
+.green{
+  background-color: transparent !important;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  &:before, &:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font: 15px/1 'Open Sans', sans-serif;
+  color: white;
+  background: white;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100%;
+}
+
+nav {
+  width: 200px;
+  background: #2E363F;
+}
+
+main {
+  flex: 1;
+  padding: 25px;
+  background: white;
+  h1 {
+    height: 80px;
+    margin: -25px -25px 25px -25px;
+    padding: 0 25px;
+    line-height: 76px;
+    font-size: 24px;
+    font-weight: 400;
+    background: #ddd;
+  }
+}
+
+/* Main grid structure */
+
+.flex-grid {
+  display: flex;
+  > div {
+    flex: 1;
+    margin: 0 20px 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  h2 {
+    margin: -15px -15px 15px -15px;
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: 400;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+/* Media Queries */
+
+@include from($screen) {
+  .flex-grid {
+    flex-direction: column;
+    > div {
+      margin-right: 0;
+    }
+  }
+}
+
+.theme--light.application {
+  background: none !important;
+  color: #777!important;
+  background-color: transparent !important;
+
+}

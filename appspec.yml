@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: .
+    destination: /srv/skynet-app/
+hooks:
+  AfterInstall:
+    - location: scripts/after_install
+      timeout: 960
+      runas: root
